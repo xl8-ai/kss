@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 from setuptools.command.install import install
 
 required = [
-    "emoji==1.2.0",
+    "emoji>=2.5.1",
     "regex",
     "more_itertools",
 ]

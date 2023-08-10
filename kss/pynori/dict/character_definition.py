@@ -10,7 +10,9 @@ import regex
 
 _emojis = {}
 for lang in ["pt", "it", "es", "en"]:
-    _emojis.update(emoji.UNICODE_EMOJI[lang])
+    emoji_unicode = emoji.unicode_codes.get_emoji_unicode_dict(lang)
+    unicode_emoji = {v: k for k, v in emoji_unicode.items()}
+    _emojis.update(unicode_emoji)
 
 
 def get_emoji(text):
